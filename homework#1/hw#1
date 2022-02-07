@@ -1,0 +1,59 @@
+-- How many trips were there on January 15?
+
+SELECT
+	COUNT(*)
+FROM
+	yellow_taxi_trips
+WHERE
+	CAST(tpep_pickup_datetime as DATE) = '2021-01-15';
+
+-- On which day it was the largest tip in January?
+
+SELECT
+	CAST(tpep_pickup_datetime as DATE) as pu_day,
+	MAX(tip_amount) as max_tip
+FROM
+	yellow_taxi_trips
+GROUP BY
+	pu_day
+ORDER BY
+	max_tip DESC
+LIMIT 1;
+
+-- What was the most popular destination for passengers picked up in central park on January 14? 
+-- Enter the zone name (not id). If the zone name is unknwown (missing), write "Unknown"
+
+SELECT
+	COALESCE(zd."Zone", 'Unknown') as dozone,
+	COUNT(*) as trip_count
+FROM
+	yellow_taxi_trips as t
+	LEFT JOIN zones as zp
+		ON t."PULocationID" = zp."LocationID"
+	LEFT JOIN zones as zd
+		ON t."DOLocationID" = zd."LocationID"
+WHERE zp."Zone" ILIKE '%central park%' AND CAST(tpep_pickup_datetime as DATE) = '2021-01-14'
+GROUP BY
+	dozone
+ORDER BY
+	trip_count DESC
+LIMIT 1;
+
+-- What's the pickup-dropoff pair with largest average price for a ride (calculated based on total_amount)?
+-- Enter two zone names separated by a slash. For example: 'Jamaica Bay / Clinton East'. If any of the zone
+-- names are unknown (missing) write "Unknown". For example: "Unknown / Clinton East"
+
+SELECT
+	CONCAT(COALESCE(zp."Zone", 'Unknown'), '/', COALESCE(zd."Zone", 'Unknown')) as trip,
+	AVG(total_amount) as avg_price
+FROM
+	yellow_taxi_trips as t
+	LEFT JOIN zones as zp
+		ON t."PULocationID" = zp."LocationID"
+	LEFT JOIN zones as zd
+		ON t."DOLocationID" = zd."LocationID"
+GROUP BY
+	trip
+ORDER BY
+	avg_price DESC
+LIMIT 1;

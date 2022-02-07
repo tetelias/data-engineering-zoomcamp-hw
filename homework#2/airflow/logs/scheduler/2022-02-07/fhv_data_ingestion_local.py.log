@@ -1,0 +1,21 @@
+[2022-02-07 15:47:35,558] {processor.py:163} INFO - Started process (PID=1672) to work on /opt/airflow/dags/fhv_data_ingestion_local.py
+[2022-02-07 15:47:35,559] {processor.py:642} INFO - Processing file /opt/airflow/dags/fhv_data_ingestion_local.py for tasks to queue
+[2022-02-07 15:47:35,560] {logging_mixin.py:109} INFO - [2022-02-07 15:47:35,560] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/fhv_data_ingestion_local.py
+[2022-02-07 15:47:36,093] {processor.py:654} INFO - DAG(s) dict_keys(['LocalIngestionDag']) retrieved from /opt/airflow/dags/fhv_data_ingestion_local.py
+[2022-02-07 15:47:36,304] {logging_mixin.py:109} INFO - [2022-02-07 15:47:36,304] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-07 15:47:36,322] {logging_mixin.py:109} INFO - [2022-02-07 15:47:36,322] {dag.py:2935} INFO - Setting next_dagrun for LocalIngestionDag to 2022-02-02T06:00:00+00:00
+[2022-02-07 15:47:36,336] {processor.py:171} INFO - Processing /opt/airflow/dags/fhv_data_ingestion_local.py took 0.782 seconds
+[2022-02-07 15:48:06,451] {processor.py:163} INFO - Started process (PID=1738) to work on /opt/airflow/dags/fhv_data_ingestion_local.py
+[2022-02-07 15:48:06,453] {processor.py:642} INFO - Processing file /opt/airflow/dags/fhv_data_ingestion_local.py for tasks to queue
+[2022-02-07 15:48:06,453] {logging_mixin.py:109} INFO - [2022-02-07 15:48:06,453] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/fhv_data_ingestion_local.py
+[2022-02-07 15:48:06,941] {processor.py:654} INFO - DAG(s) dict_keys(['LocalIngestionDag']) retrieved from /opt/airflow/dags/fhv_data_ingestion_local.py
+[2022-02-07 15:48:06,951] {logging_mixin.py:109} INFO - [2022-02-07 15:48:06,951] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-07 15:48:06,967] {logging_mixin.py:109} INFO - [2022-02-07 15:48:06,967] {dag.py:2935} INFO - Setting next_dagrun for LocalIngestionDag to 2022-02-02T06:00:00+00:00
+[2022-02-07 15:48:06,977] {processor.py:171} INFO - Processing /opt/airflow/dags/fhv_data_ingestion_local.py took 0.531 seconds
+[2022-02-07 15:48:37,094] {processor.py:163} INFO - Started process (PID=1804) to work on /opt/airflow/dags/fhv_data_ingestion_local.py
+[2022-02-07 15:48:37,095] {processor.py:642} INFO - Processing file /opt/airflow/dags/fhv_data_ingestion_local.py for tasks to queue
+[2022-02-07 15:48:37,096] {logging_mixin.py:109} INFO - [2022-02-07 15:48:37,096] {dagbag.py:500} INFO - Filling up the DagBag from /opt/airflow/dags/fhv_data_ingestion_local.py
+[2022-02-07 15:48:37,609] {processor.py:654} INFO - DAG(s) dict_keys(['LocalIngestionDag']) retrieved from /opt/airflow/dags/fhv_data_ingestion_local.py
+[2022-02-07 15:48:37,613] {logging_mixin.py:109} INFO - [2022-02-07 15:48:37,612] {dag.py:2396} INFO - Sync 1 DAGs
+[2022-02-07 15:48:37,630] {logging_mixin.py:109} INFO - [2022-02-07 15:48:37,630] {dag.py:2935} INFO - Setting next_dagrun for LocalIngestionDag to 2022-02-02T06:00:00+00:00
+[2022-02-07 15:48:37,641] {processor.py:171} INFO - Processing /opt/airflow/dags/fhv_data_ingestion_local.py took 0.553 seconds
